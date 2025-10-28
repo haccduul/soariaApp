@@ -10,7 +10,7 @@ export const Footer = () => {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
@@ -21,9 +21,15 @@ export const Footer = () => {
           {/* Left column: Logo, tagline, CTA */}
           <div className="space-y-4">
             <div>
-              <img src={soariaLogo} alt="Soaria.AI" className="h-8 w-auto" />
+              <img
+                src={soariaLogo}
+                alt="Soaria.AI"
+                className="h-14 w-auto"
+              />
             </div>
-            <p className="text-muted-foreground">Elevate your business with Soaria.</p>
+            <p className="text-muted-foreground">
+              Elevate your business with Soaria.
+            </p>
             <div className="flex flex-col gap-3 max-w-xs">
               <Button
                 variant="outline"
@@ -40,26 +46,26 @@ export const Footer = () => {
 
           {/* Right column: Navigation */}
           <nav className="flex flex-wrap gap-4 md:justify-end">
-            <button 
-              onClick={() => scrollToSection('solutions')}
+            <button
+              onClick={() => scrollToSection("solutions")}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Solutions
             </button>
-            <button 
-              onClick={() => scrollToSection('how')}
+            <button
+              onClick={() => scrollToSection("how")}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               How it works
             </button>
-            <button 
-              onClick={() => scrollToSection('features')}
+            <button
+              onClick={() => scrollToSection("features")}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Features
             </button>
-            <button 
-              onClick={() => scrollToSection('pricing')}
+            <button
+              onClick={() => scrollToSection("pricing")}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Pricing
