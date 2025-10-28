@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
+import soariaLogo from "@/assets/Soaria.AI_Logo.png";
+import customerPhoto from "@/assets/customer.jpg";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -109,8 +111,8 @@ const ChatBubble = ({ type, children }: { type: 'bot' | 'user'; children: React.
   return (
     <div className={`flex items-start gap-3 ${isBot ? 'justify-start' : 'justify-end'}`}>
       {isBot && (
-        <div className="w-11 h-11 rounded-full flex items-center justify-center border border-accent/25 bg-background/50 shadow-lg">
-          <MessageSquare className="w-5 h-5 text-accent" />
+        <div className="w-11 h-11 rounded-full overflow-hidden border border-accent/25 bg-background/50 shadow-lg">
+          <img src={soariaLogo} alt="AI Assistant" className="w-full h-full object-cover" />
         </div>
       )}
       <div 
@@ -123,7 +125,9 @@ const ChatBubble = ({ type, children }: { type: 'bot' | 'user'; children: React.
         {children}
       </div>
       {!isBot && (
-        <div className="w-11 h-11 rounded-full border border-white/20 bg-gradient-to-br from-primary/20 to-accent/20 shadow-lg" />
+        <div className="w-11 h-11 rounded-full overflow-hidden border border-white/20 shadow-lg">
+          <img src={customerPhoto} alt="Customer" className="w-full h-full object-cover" />
+        </div>
       )}
     </div>
   );

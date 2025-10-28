@@ -28,7 +28,7 @@ export const HowItWorks = () => {
           {steps.map((step, index) => (
             <Card 
               key={index}
-              className="relative pl-16 p-6 border-white/12 shadow-lg opacity-0 animate-[fadeInUp_0.7s_ease_forwards] hover:border-accent/45 hover:shadow-[0_0_28px_0_rgba(177,92,255,0.55)] transition-all duration-300"
+              className="relative pl-20 p-6 border-white/12 shadow-lg opacity-0 animate-[fadeInUp_0.7s_ease_forwards] hover:border-accent/45 hover:shadow-[0_0_28px_0_rgba(177,92,255,0.55)] transition-all duration-300"
               style={{
                 background: 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
                 backdropFilter: 'blur(18px)',
@@ -36,7 +36,7 @@ export const HowItWorks = () => {
               }}
             >
               <div 
-                className="absolute left-6 top-6 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white text-sm"
+                className="absolute left-6 top-6 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-base flex-shrink-0"
                 style={{ background: 'linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)))' }}
               >
                 {step.number}

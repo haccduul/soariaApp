@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import soariaLogo from "@/assets/Soaria White.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,9 +21,7 @@ export const Footer = () => {
           {/* Left column: Logo, tagline, CTA */}
           <div className="space-y-4">
             <div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Soaria.AI
-              </span>
+              <img src={soariaLogo} alt="Soaria.AI" className="h-8 w-auto" />
             </div>
             <p className="text-muted-foreground">Elevate your business with Soaria.</p>
             <div className="flex flex-col gap-3 max-w-xs">

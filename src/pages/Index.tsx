@@ -1,6 +1,7 @@
 import { NeuralBackground } from "@/components/NeuralBackground";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { KPIs } from "@/components/KPIs";
 import { Solutions } from "@/components/Solutions";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Features } from "@/components/Features";
@@ -38,6 +39,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <KPIs />
         <Solutions />
         <HowItWorks />
         <Features />
