@@ -15,7 +15,7 @@ export const Header = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
     setMobileMenuOpen(false);
@@ -23,29 +23,41 @@ export const Header = () => {
 
   return (
     <header className="sticky top-3 z-50 mx-auto max-w-[1100px] px-6">
-      <div 
+      <div
         className="flex items-center justify-between gap-3 rounded-2xl border border-white/8 px-6 py-3.5"
         style={{
-          background: 'rgba(15, 15, 26, 0.55)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
+          background: "rgba(15, 15, 26, 0.55)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
         }}
       >
         {/* Logo */}
         <a href="/" className="flex items-center">
-          <img src={soariaLogo} alt="Soaria.AI" className="h-8 w-auto" />
+          <img
+            src={soariaLogo}
+            alt="Soaria.AI"
+            className="h-10 md:h-12 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1 ml-auto">
-          <NavLink onClick={() => scrollToSection('solutions')}>Solutions</NavLink>
-          <NavLink onClick={() => scrollToSection('how')}>How it works</NavLink>
-          <NavLink onClick={() => scrollToSection('features')}>Features</NavLink>
-          <NavLink onClick={() => scrollToSection('pricing')}>Pricing</NavLink>
+          <NavLink onClick={() => scrollToSection("solutions")}>
+            Solutions
+          </NavLink>
+          <NavLink onClick={() => scrollToSection("how")}>
+            How it works
+          </NavLink>
+          <NavLink onClick={() => scrollToSection("features")}>
+            Features
+          </NavLink>
+          <NavLink onClick={() => scrollToSection("pricing")}>
+            Pricing
+          </NavLink>
           <Button
             variant="outline"
             className="ml-2 border-border/60 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:border-transparent hover:text-white transition-all"
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection("contact")}
           >
             Contact
           </Button>
@@ -63,21 +75,30 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav 
+          <nav
             className="absolute top-full right-6 mt-2 min-w-[210px] flex flex-direction-column gap-1.5 p-2.5 rounded-2xl border border-white/12 shadow-2xl md:hidden"
             style={{
-              background: 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
-              backdropFilter: 'blur(18px)',
+              background:
+                "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
+              backdropFilter: "blur(18px)",
             }}
           >
-            <MobileNavLink onClick={() => scrollToSection('solutions')}>Solutions</MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection('how')}>How it works</MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection('features')}>Features</MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection('pricing')}>Pricing</MobileNavLink>
+            <MobileNavLink onClick={() => scrollToSection("solutions")}>
+              Solutions
+            </MobileNavLink>
+            <MobileNavLink onClick={() => scrollToSection("how")}>
+              How it works
+            </MobileNavLink>
+            <MobileNavLink onClick={() => scrollToSection("features")}>
+              Features
+            </MobileNavLink>
+            <MobileNavLink onClick={() => scrollToSection("pricing")}>
+              Pricing
+            </MobileNavLink>
             <Button
               variant="outline"
               className="mt-2 w-full"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
             >
               Contact
             </Button>
@@ -88,7 +109,13 @@ export const Header = () => {
   );
 };
 
-const NavLink = ({ onClick, children }: { onClick: () => void; children: React.ReactNode }) => (
+const NavLink = ({
+  onClick,
+  children,
+}: {
+  onClick: () => void;
+  children: React.ReactNode;
+}) => (
   <button
     onClick={onClick}
     className="relative px-3 py-2 rounded-lg text-sm font-medium text-foreground/95 hover:bg-white/5 transition-all group"
@@ -98,7 +125,13 @@ const NavLink = ({ onClick, children }: { onClick: () => void; children: React.R
   </button>
 );
 
-const MobileNavLink = ({ onClick, children }: { onClick: () => void; children: React.ReactNode }) => (
+const MobileNavLink = ({
+  onClick,
+  children,
+}: {
+  onClick: () => void;
+  children: React.ReactNode;
+}) => (
   <button
     onClick={onClick}
     className="block w-full text-left px-3 py-2.5 rounded-lg hover:bg-white/6 transition-colors"
