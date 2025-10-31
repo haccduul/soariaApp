@@ -17,10 +17,11 @@ export const Footer = () => {
   return (
     <footer className="border-t border-border/60 py-8 mt-12">
       <div className="container mx-auto px-6 max-w-[1100px]">
-        <div className="grid md:grid-cols-[1.4fr_1fr] gap-8 items-center">
+        {/* mobile: stacked + centered, md+: 2 cols */}
+        <div className="flex flex-col items-center gap-8 md:grid md:grid-cols-[1.4fr_1fr] md:items-center md:text-left">
           {/* Left column: Logo, tagline, CTA */}
-          <div className="space-y-4">
-            <div>
+          <div className="space-y-4 text-center md:text-left">
+            <div className="flex justify-center md:justify-start">
               <img
                 src={soariaLogo}
                 alt="Soaria.AI"
@@ -30,7 +31,7 @@ export const Footer = () => {
             <p className="text-muted-foreground">
               Elevate your business with Soaria.
             </p>
-            <div className="flex flex-col gap-3 max-w-xs">
+            <div className="flex flex-col gap-3 max-w-xs mx-auto md:mx-0">
               <Button
                 variant="outline"
                 className="border-white/12 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:border-transparent hover:text-white"
@@ -45,7 +46,7 @@ export const Footer = () => {
           </div>
 
           {/* Right column: Navigation */}
-          <nav className="flex flex-wrap gap-4 md:justify-end">
+          <nav className="flex flex-wrap gap-4 justify-center md:justify-end">
             <button
               onClick={() => scrollToSection("solutions")}
               className="text-muted-foreground hover:text-foreground transition-colors"
