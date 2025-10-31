@@ -76,11 +76,26 @@ export const Header = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav
-            className="absolute top-full right-6 mt-2 min-w-[210px] flex flex-direction-column gap-1.5 p-2.5 rounded-2xl border border-white/12 shadow-2xl md:hidden"
+            className="
+              absolute
+              top-full
+              left-0
+              right-0
+              mt-3
+              mx-3
+              flex
+              flex-col
+              gap-1.5
+              p-3
+              rounded-2xl
+              border
+              border-white/18
+              shadow-2xl
+              md:hidden
+            "
             style={{
-              background:
-                "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
-              backdropFilter: "blur(18px)",
+              background: "rgba(12, 12, 18, 0.9)", // more opaque
+              backdropFilter: "blur(12px)",
             }}
           >
             <MobileNavLink onClick={() => scrollToSection("solutions")}>
@@ -97,7 +112,7 @@ export const Header = () => {
             </MobileNavLink>
             <Button
               variant="outline"
-              className="mt-2 w-full"
+              className="mt-2 w-full border-white/30 bg-black/10"
               onClick={() => scrollToSection("contact")}
             >
               Contact
