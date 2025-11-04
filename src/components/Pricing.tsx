@@ -16,7 +16,7 @@ export const Pricing = () => {
   const plans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$299 + Overage",
       unit: "/mo",
       features: [
         "Single location",
@@ -29,12 +29,12 @@ export const Pricing = () => {
     },
     {
       name: "Growth",
-      price: "$499",
+      price: "$499 + Overage",
       unit: "/mo",
       features: [
         "Voice + chat + SMS",
         "Multi-calendar routing",
-        "Reschedule & cancel flows",
+        "Reschedule & cancel",
         "Priority support"
       ],
       cta: "Get started",
@@ -45,10 +45,10 @@ export const Pricing = () => {
       price: "Custom",
       unit: "",
       features: [
-        "SLA & SSO",
+        "Multi-location",
         "Advanced analytics",
-        "Onboarding & training",
-        "Dedicated CSM"
+        "Custom integrations",
+        "Unlimited usage"
       ],
       cta: "Contact us",
       featured: false
