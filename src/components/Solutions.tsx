@@ -4,15 +4,15 @@ export const Solutions = () => {
   const solutions = [
     {
       title: "Spas & Salons",
-      description: "Service-aware durations, intake questions, and real-time conflict checks with Google Calendar, Calendly, and more."
+      description: "Service-aware durations, intake questions, and real-time conflict checks with your existing calendar."
     },
     {
       title: "Restaurants & Hospitality",
-      description: "Table and party-size logic, waitlist capture, SMS confirmations, and integrations with popular booking platforms."
+      description: "Table and party-size logic, SMS confirmations, and integrations with popular booking platforms."
     },
     {
       title: "Home & Field Services",
-      description: "Route-time buffers, multi-technician calendars, and rescheduling flows that minimize no-shows."
+      description: "Route-time buffers, multi-technician calendars, and rescheduling that minimize no-shows."
     }
   ];
 
